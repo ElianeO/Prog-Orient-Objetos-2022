@@ -8,14 +8,15 @@ package br.edu.fatecfranca.projeto2.exe5;
  *
  * @author lihhc
  */
+
 public final class Aluno2 {
-    private int idade;
-    private String nome, numAluno;
+    private int idade, numAluno;
+    private String nome;
     private double p1, p2, notafinal;
   
      public Aluno2(){
      }
-     public Aluno2(String nome, String numAluno, int idade, double p1, double p2){
+     public Aluno2(String nome, int numAluno, int idade, double p1, double p2){
          this.setNome(nome);
          this.setNumAluno(numAluno);
          this.setIdade(idade);
@@ -28,8 +29,8 @@ public final class Aluno2 {
          }
          else System.out.println("Tamanho do nome é grande demais");
      }
-     public void setNumAluno(String numAluno){
-         if(numAluno.length() == 6){
+     public void setNumAluno(int numAluno){
+         if(Math.floor(Math.log10(numAluno) +1) == 6){
              this.numAluno = numAluno;
          } else System.out.println("Numero do aluno não pode ser diferente de 6 dígitos");
      }
@@ -51,7 +52,7 @@ public final class Aluno2 {
      public String getNome(){
          return this.nome;
      }
-     public String getNumAluno(){
+     public int getNumAluno(){
          return this.numAluno;
      }
      public int getIdade(){
@@ -64,12 +65,13 @@ public final class Aluno2 {
          return this.p2;
      }
      public void notaFinal(){
-         this.notafinal = this.p1 + this.p2 / 2;
-         System.out.println("A nota final do aluno foi de: " + this.notafinal);
+         this.notafinal += (this.p1+ this.p2) / 2;
+         System.out.println("\nNota final: " + this.notafinal);
      }
      public void dadosAluno(){
          System.out.println("\nNumero do aluno: " + this.numAluno + "\nNome: " + this.nome + "\nIdade: " + this.idade);
      }
+
 }
 
  
