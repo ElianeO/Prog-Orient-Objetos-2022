@@ -15,7 +15,7 @@ public class Projeto2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Aluno2 obj1 = new Aluno2("Maria Eduarda", "123456", 15, 10, 5);
+        Aluno2 obj1 = new Aluno2("Maria Eduarda", 123456, 15, 10, 5);
         obj1.dadosAluno();
         obj1.notaFinal();
     }
